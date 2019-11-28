@@ -1,0 +1,22 @@
+
+<mat-card>
+    <form (submit)="onEditBook(bookForm)" #bookForm="ngForm">
+        <mat-form-field>
+            <label> Book Name:</label>
+            <input matInput type="text" name="bookTitle" ngModel={{book.bookTitle}} required #title="ngModel">
+        </mat-form-field>
+
+        <mat-form-field>
+            <label> Book Author:</label>
+            <input matInput type="text" name="author" ngModel={{book.author}} required #title="ngModel">
+        </mat-form-field>
+
+        <mat-form-field>
+            <label> Book Img:</label>
+            <input matInput type="text" name="img" ngModel={{book.img}} required #title="ngModel">
+        </mat-form-field>
+    
+
+        <button mat-raised-button color="accent" type="submit">Edit Books</button>
+    </form>
+</mat-card>
